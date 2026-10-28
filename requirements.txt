@@ -1,0 +1,7 @@
+# vLLM version recorded in the archived experiment.
+# Install inside Linux/WSL with a compatible Python and NVIDIA driver.
+vllm==0.31.0
+# Required directly by try.py; exact historical versions were not saved.
+transformers
+psutil
+nvidia-ml-py

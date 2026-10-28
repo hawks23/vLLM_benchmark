@@ -8,7 +8,7 @@
     "max_model_len": 2048,
     "batch_tokens": 512,
     "gpu_memory_utilization": 0.85,
-    "output_dir": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results"
+    "output_dir": "benchmark_results"
   },
   "cases": [
     {
@@ -19,7 +19,7 @@
           "max_num_seqs": 1,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T151839_360200Z/1_sequential/cap_1/1_sequential_20261024T151920_512217Z.json"
+          "report_file": "benchmark_results/suite_20261024T151839_360200Z/1_sequential/cap_1/1_sequential_20261024T151920_512217Z.json"
         }
       ],
       "status": "completed",
@@ -170,7 +170,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T151839_360200Z/2_continuous_pairs/cap_2/2_continuous_pairs_20261024T152004_556741Z.json"
+          "report_file": "benchmark_results/suite_20261024T151839_360200Z/2_continuous_pairs/cap_2/2_continuous_pairs_20261024T152004_556741Z.json"
         }
       ],
       "status": "completed",
@@ -321,7 +321,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T151839_360200Z/3_static_pairs/cap_2/3_static_pairs_20261024T152049_062407Z.json"
+          "report_file": "benchmark_results/suite_20261024T151839_360200Z/3_static_pairs/cap_2/3_static_pairs_20261024T152049_062407Z.json"
         }
       ],
       "status": "completed",
@@ -472,7 +472,7 @@
           "max_num_seqs": 6,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T151839_360200Z/4_auto_capacity/cap_6/4_auto_capacity_20261024T152133_569431Z.json"
+          "report_file": "benchmark_results/suite_20261024T151839_360200Z/4_auto_capacity/cap_6/4_auto_capacity_20261024T152133_569431Z.json"
         }
       ],
       "status": "completed",

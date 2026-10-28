@@ -82,7 +82,7 @@ class Hardware:
             pynvml.nvmlInit()
             self.nv = pynvml
             self.handle = pynvml.nvmlDeviceGetHandleByIndex(gpu)
-            for name, fun in [('name', pynvml.nvmlDeviceGetName), ('uuid', pynvml.nvmlDeviceGetUUID)]:
+            for name, fun in [('name', pynvml.nvmlDeviceGetName)]:
                 value = fun(self.handle)
                 self.device[name] = value.decode() if isinstance(value, bytes) else value
         except Exception as exc:

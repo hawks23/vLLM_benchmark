@@ -8,13 +8,13 @@
     "max_model_len": 2048,
     "batch_tokens": 512,
     "gpu_memory_utilization": 0.85,
-    "output_dir": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results",
+    "output_dir": "benchmark_results",
     "request_counts": [
       16,
       20,
       24
     ],
-    "results_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/max_concurrency_tests.json"
+    "results_file": "max_concurrency_tests.json"
   },
   "cases": [
     {
@@ -26,7 +26,7 @@
           "max_num_seqs": 1,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n16_1_sequential/cap_1/n16_1_sequential_20261024T194627_597978Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n16_1_sequential/cap_1/n16_1_sequential_20261024T194627_597978Z.json"
         }
       ],
       "status": "completed",
@@ -180,7 +180,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n16_2_continuous_pairs/cap_2/n16_2_continuous_pairs_20261024T194936_693426Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n16_2_continuous_pairs/cap_2/n16_2_continuous_pairs_20261024T194936_693426Z.json"
         }
       ],
       "status": "completed",
@@ -334,7 +334,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n16_3_static_pairs/cap_2/n16_3_static_pairs_20261024T195250_797602Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n16_3_static_pairs/cap_2/n16_3_static_pairs_20261024T195250_797602Z.json"
         }
       ],
       "status": "completed",
@@ -488,7 +488,7 @@
           "max_num_seqs": 16,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n16_4_auto_capacity/cap_16/n16_4_auto_capacity_20261024T195357_475956Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n16_4_auto_capacity/cap_16/n16_4_auto_capacity_20261024T195357_475956Z.json"
         }
       ],
       "status": "completed",
@@ -642,7 +642,7 @@
           "max_num_seqs": 1,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n20_1_sequential/cap_1/n20_1_sequential_20261024T200019_813615Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n20_1_sequential/cap_1/n20_1_sequential_20261024T200019_813615Z.json"
         }
       ],
       "status": "completed",
@@ -796,7 +796,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n20_2_continuous_pairs/cap_2/n20_2_continuous_pairs_20261024T200412_829202Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n20_2_continuous_pairs/cap_2/n20_2_continuous_pairs_20261024T200412_829202Z.json"
         }
       ],
       "status": "completed",
@@ -950,7 +950,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n20_3_static_pairs/cap_2/n20_3_static_pairs_20261024T200805_294885Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n20_3_static_pairs/cap_2/n20_3_static_pairs_20261024T200805_294885Z.json"
         }
       ],
       "status": "completed",
@@ -1104,7 +1104,7 @@
           "max_num_seqs": 20,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n20_4_auto_capacity/cap_20/n20_4_auto_capacity_20261024T200910_383514Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n20_4_auto_capacity/cap_20/n20_4_auto_capacity_20261024T200910_383514Z.json"
         }
       ],
       "status": "completed",
@@ -1258,7 +1258,7 @@
           "max_num_seqs": 1,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n24_1_sequential/cap_1/n24_1_sequential_20261024T201635_476561Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n24_1_sequential/cap_1/n24_1_sequential_20261024T201635_476561Z.json"
         }
       ],
       "status": "completed",
@@ -1412,7 +1412,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n24_2_continuous_pairs/cap_2/n24_2_continuous_pairs_20261024T202057_821942Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n24_2_continuous_pairs/cap_2/n24_2_continuous_pairs_20261024T202057_821942Z.json"
         }
       ],
       "status": "completed",
@@ -1566,7 +1566,7 @@
           "max_num_seqs": 2,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n24_3_static_pairs/cap_2/n24_3_static_pairs_20261024T202535_329249Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n24_3_static_pairs/cap_2/n24_3_static_pairs_20261024T202535_329249Z.json"
         }
       ],
       "status": "completed",
@@ -1720,7 +1720,7 @@
           "max_num_seqs": 24,
           "exit_code": 0,
           "memory_failure": false,
-          "report_file": "/mnt/c/Users/sweet/Documents/From old PC/Coding_stuff/vLLM_stuff/benchmark_results/suite_20261024T194111_631149Z/n24_4_auto_capacity/cap_24/n24_4_auto_capacity_20261024T202640_110939Z.json"
+          "report_file": "benchmark_results/suite_20261024T194111_631149Z/n24_4_auto_capacity/cap_24/n24_4_auto_capacity_20261024T202640_110939Z.json"
         }
       ],
       "status": "completed",

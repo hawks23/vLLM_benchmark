@@ -58,7 +58,9 @@ def execute(args, folder, label, cap, mode, request_count=6):
     attempt = dict(max_num_seqs=cap, exit_code=code, memory_failure=memory_failure)
     if code:
         print(f'Attempt failed (exit {code}, memory-related={memory_failure}).', flush=True)
-        attempt['error_tail'] = list(tail)
+        # Diagnostic output can contain local paths; keep it out of saved reports.
+        print('\n'.join(tail), file=sys.stderr)
+        attempt['error_tail'] = ['Diagnostic output omitted from saved report; see terminal.']
         return None, attempt
     reports = sorted(destination.glob('*.json'))
     if len(reports) != 1:
@@ -69,7 +71,7 @@ def execute(args, folder, label, cap, mode, request_count=6):
     if report['performance']['request_count'] != expected:
         attempt['error_tail'] = [f'Expected {expected} completed requests.']
         return None, attempt
-    attempt['report_file'] = str(reports[0])
+    attempt['report_file'] = reports[0].relative_to(folder).as_posix()
     return report, attempt
 
 
@@ -93,7 +95,7 @@ def display(suite):
               f"{f(vram['peak'] if vram else None):>10}")
     print('Case 3: static pairs, no refill until both finish; internal vLLM scheduling remains enabled.')
     print('Case 4: highest successful cap <= workload size, not an absolute GPU limit or optimal throughput.')
-    print('Successful runs save aggregate metrics only; errors retain a short diagnostic tail.')
+    print('Successful runs save aggregate metrics only; failure diagnostics are printed only to the terminal.')
 
 
 def main(argv=None):
@@ -132,7 +134,8 @@ def main(argv=None):
         if named_path:
             save(named_path, suite)
     suite = dict(schema_version=1, timestamp_utc=datetime.now(timezone.utc).isoformat(),
-                 status='running', settings=vars(args), cases=[],
+                 status='running', settings={key: value for key, value in vars(args).items()
+                     if key not in {'output_dir', 'results_file'}}, cases=[],
                  notes=['All workload prompts are logically available at each round start in every case.',
                         'Workloads repeat the same six prompts in order; prefix caching is disabled. Different workload sizes can have slightly different prompt mixes.',
                         'Use workload timing to include client-side waits in static batching.',
@@ -170,7 +173,7 @@ def main(argv=None):
         suite['status'] = 'completed' if all(c['status'] == 'completed' for c in suite['cases']) else 'completed_with_failures'
     except BaseException as exc:
         suite['status'] = 'interrupted' if isinstance(exc, KeyboardInterrupt) else 'failed'
-        suite['error'] = f'{type(exc).__name__}: {exc}'
+        suite['error'] = type(exc).__name__
         raise
     finally:
         checkpoint()

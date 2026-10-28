@@ -1,0 +1,28 @@
+# Local environments and Python cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Credentials and editor settings
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# New runs, diagnostic logs, downloads, and temporary outputs
+runs/
+*.log
+*.json.tmp
+*_previous_*.json
+.cache/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+.DS_Store
+Thumbs.db
