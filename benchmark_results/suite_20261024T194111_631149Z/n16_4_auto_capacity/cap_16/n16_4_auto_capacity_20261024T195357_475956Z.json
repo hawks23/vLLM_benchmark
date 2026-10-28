@@ -1,0 +1,138 @@
+{
+  "schema_version": 2,
+  "timestamp_utc": "2026-10-24T19:53:57.453804+00:00",
+  "label": "n16_4_auto_capacity",
+  "settings": {
+    "engine": {
+      "model": "sanskar003/Qwen3.5-9B-AWQ",
+      "quantization": "compressed-tensors",
+      "dtype": "float16",
+      "gpu_memory_utilization": 0.85,
+      "max_model_len": 2048,
+      "max_num_seqs": 16,
+      "max_num_batched_tokens": 512,
+      "enforce_eager": true,
+      "limit_mm_per_prompt": {
+        "image": 0,
+        "video": 0
+      },
+      "seed": 42,
+      "enable_prefix_caching": false,
+      "enable_chunked_prefill": true,
+      "generation_config": "vllm",
+      "disable_log_stats": true
+    },
+    "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "top_k": -1,
+      "max_tokens": 1024,
+      "seed": 42
+    },
+    "rounds": 1,
+    "prompts_per_round": 16,
+    "submission_mode": "continuous",
+    "prompt_policy": "Repeat the same six prompts in order; prefix caching disabled unless explicitly enabled.",
+    "concurrency": 16,
+    "thinking": false,
+    "flashinfer_sampler": false,
+    "hardware_sample_interval_s": 0.5
+  },
+  "system": {
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "vllm": "0.31.0",
+    "torch": "2.13.0+cu130",
+    "cuda": "13.0"
+  },
+  "performance": {
+    "initialization_s": 27.887764857998263,
+    "warmup_s": 1.6631712589987728,
+    "request_count": 16,
+    "measured_wall_s": 23.664193141998112,
+    "output_tokens": 7755,
+    "input_tokens": 989,
+    "aggregate_output_tokens_s": 327.7103070223335,
+    "requests_s": 0.6761270035277029,
+    "length_limited_outputs": 0,
+    "ttft_s": {
+      "mean": 1.4080300451250878,
+      "p50": 1.5078419860001304,
+      "p95": 1.632124175500394,
+      "peak": 1.632148992997827
+    },
+    "latency_s": {
+      "mean": 20.174493146125087,
+      "p50": 21.017564043000675,
+      "p95": 23.571829472748504,
+      "peak": 23.663120077999338
+    },
+    "tpot_s": {
+      "mean": 0.03873987281524234,
+      "p50": 0.03859028562426746,
+      "p95": 0.040816811788252076,
+      "peak": 0.04082626460593668
+    },
+    "decode_tokens_s": {
+      "mean": 25.8245320234389,
+      "p50": 25.913257393828015,
+      "p95": 26.37715642788481,
+      "peak": 26.57062269666865
+    },
+    "client_wait_s": {
+      "mean": 0.0008369826871330588,
+      "p50": 0.000860133000969654,
+      "p95": 0.0011392329997761408,
+      "peak": 0.0011683660013659392
+    },
+    "workload_ttft_s": {
+      "mean": 1.4088670278122208,
+      "p50": 1.5085420705017896,
+      "p95": 1.633136364499478,
+      "peak": 1.6331413250009064
+    },
+    "workload_latency_s": {
+      "mean": 20.17533012881222,
+      "p50": 21.01848231599979,
+      "p95": 23.57264363899867,
+      "peak": 23.664120691999415
+    }
+  },
+  "hardware": {
+    "cpu_percent": {
+      "mean": 4.336170212765958,
+      "peak": 4.5
+    },
+    "wsl_ram_used_gib": {
+      "mean": 5.126527664509226,
+      "peak": 5.205467224121094
+    },
+    "wsl_swap_used_gib": {
+      "mean": 0.255859375,
+      "peak": 0.255859375
+    },
+    "gpu_percent": {
+      "mean": 56.148936170212764,
+      "peak": 99
+    },
+    "gpu_vram_used_gib": {
+      "mean": 11.399818501573927,
+      "peak": 11.42679214477539
+    },
+    "gpu_power_w": {
+      "mean": 66.96704255319149,
+      "peak": 69.625
+    },
+    "gpu_temperature_c": {
+      "mean": 63.319148936170215,
+      "peak": 65
+    }
+  },
+  "measurement_notes": [
+    "Performance and hardware aggregates exclude initialization and warmup.",
+    "TTFT includes engine queueing; excludes tokenization and client semaphore wait.",
+    "workload_ttft_s and workload_latency_s start at the round boundary, including static-wave/client waits; use these to compare submission modes.",
+    "static-waves simulates no batch refill at the client; it does not disable the internal vLLM scheduler.",
+    "Decode rate uses observed stream timing; GPU counters cover the whole device, CPU/RAM cover WSL.",
+    "Hardware peaks are sampled; null means unavailable."
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "timestamp_utc": "2026-10-24T15:12:16.450513+00:00",
+  "label": "4requests2parallel",
+  "settings": {
+    "engine": {
+      "model": "sanskar003/Qwen3.5-9B-AWQ",
+      "quantization": "compressed-tensors",
+      "dtype": "float16",
+      "gpu_memory_utilization": 0.85,
+      "max_model_len": 2048,
+      "max_num_seqs": 2,
+      "max_num_batched_tokens": 512,
+      "enforce_eager": true,
+      "limit_mm_per_prompt": {
+        "image": 0,
+        "video": 0
+      },
+      "seed": 42,
+      "enable_prefix_caching": false,
+      "enable_chunked_prefill": true,
+      "generation_config": "vllm",
+      "disable_log_stats": true
+    },
+    "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "top_k": -1,
+      "max_tokens": 512,
+      "seed": 42
+    },
+    "rounds": 3,
+    "prompts_per_round": 4,
+    "concurrency": 4,
+    "thinking": false,
+    "flashinfer_sampler": false,
+    "hardware_sample_interval_s": 0.5
+  },
+  "system": {
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "vllm": "0.31.0",
+    "torch": "2.13.0+cu130",
+    "cuda": "13.0"
+  },
+  "performance": {
+    "initialization_s": 32.77793693199965,
+    "warmup_s": 1.759826408000663,
+    "request_count": 12,
+    "measured_wall_s": 115.25540281599933,
+    "output_tokens": 6057,
+    "input_tokens": 777,
+    "aggregate_output_tokens_s": 52.55285090339547,
+    "requests_s": 0.10411659416224958,
+    "length_limited_outputs": 3,
+    "ttft_s": {
+      "mean": 10.18808489566633,
+      "p50": 10.231626791000053,
+      "p95": 20.901410033549475,
+      "peak": 21.048172626999076
+    },
+    "latency_s": {
+      "mean": 28.923410872499517,
+      "p50": 29.07538169649888,
+      "p95": 39.418922493549324,
+      "peak": 39.664576858000146
+    },
+    "tpot_s": {
+      "mean": 0.037189469282047916,
+      "p50": 0.037043624992857446,
+      "p95": 0.03775183827133146,
+      "peak": 0.03776532071624352
+    },
+    "decode_tokens_s": {
+      "mean": 26.892346180940486,
+      "p50": 26.995225889129788,
+      "p95": 27.21306160609458,
+      "peak": 27.230386571362008
+    }
+  },
+  "hardware": {
+    "cpu_percent": {
+      "mean": 4.418340611353712,
+      "peak": 6.6
+    },
+    "wsl_ram_used_gib": {
+      "mean": 5.3127288818359375,
+      "peak": 5.359230041503906
+    },
+    "wsl_swap_used_gib": {
+      "mean": 0.019189126626893423,
+      "peak": 0.01937103271484375
+    },
+    "gpu_percent": {
+      "mean": 51.427947598253276,
+      "peak": 74
+    },
+    "gpu_vram_used_gib": {
+      "mean": 11.428368447649428,
+      "peak": 11.431892395019531
+    },
+    "gpu_power_w": {
+      "mean": 68.51451091703056,
+      "peak": 70.063
+    },
+    "gpu_temperature_c": {
+      "mean": 64.882096069869,
+      "peak": 69
+    }
+  },
+  "measurement_notes": [
+    "Performance and hardware aggregates exclude initialization and warmup.",
+    "TTFT includes engine queueing; excludes tokenization and client semaphore wait.",
+    "Decode rate uses observed stream timing; GPU counters cover the whole device, CPU/RAM cover WSL.",
+    "Hardware peaks are sampled; null means unavailable."
+  ]
+}
